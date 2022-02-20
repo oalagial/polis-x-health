@@ -1,0 +1,82 @@
+@import './colors';
+
+nav {
+    // background: $base-color;
+    box-shadow: $light-shadow;
+  }
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-toggle {
+    font-size: 1.5rem;
+    color: blue;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+  }
+  .nav-toggle:hover {
+    color: white;
+    transform: rotate(90deg);
+  }
+  .logo {
+    font-weight: bold;
+    font-size: xx-large;
+    color: rgb(10, 10, 10);
+  }
+  .links a {
+    color: blue;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s linear;
+  }
+  .links a:hover {
+    color: $primary-2;
+    padding-left: 1.5rem;
+  }
+  .links-container {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+  }
+  .show-container {
+    height: 10rem;
+  }
+  @media screen and (min-width: 800px) {
+    .nav-center {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .nav-header {
+      padding: 0;
+      color: white;
+    }
+    .nav-toggle {
+      display: none;
+    }
+    .links-container {
+      height: auto !important;
+    }
+    .links {
+      display: flex;
+    }
+    .links a {
+      margin: 0 2rem;
+      text-decoration: none;
+    }
+    .links a:hover {
+      background: transparent;
+    }
+  }
+
+  .logo {
+    text-decoration: none;
+  }
